@@ -37,7 +37,7 @@ public class CustomSecurityConfig {
 
         //로그인기능
         http.formLogin(config ->{
-            config.loginPage("/member/login");  // 추후에 /api추가
+            config.loginPage("/api/member/login");  // 추후에 /api추가
             config.successHandler(new APILoginSuccessHandler());
             config.failureHandler(new APILoginFailHandler());
         });

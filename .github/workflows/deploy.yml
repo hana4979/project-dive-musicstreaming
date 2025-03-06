@@ -1,0 +1,35 @@
+name: GitHub Actions 실행 # workflow 의 이름
+
+on:
+  push:
+    branches:
+      - main # main 브랜치에 push 될 때 아래의 workflow 를 실행
+
+jobs:
+  My-Deploy-job:
+    runs-on: ubuntu-latest # ubuntu 환경
+    steps:
+      - name: Dive 프로젝트 배포
+        run: SSH로 EC2 접속 - 배포
+        uses: appleboy/ssh-action@master
+        env:
+          APPLICATION_PROPERTIES: ${{ secrets.APPLICATION_YML }}
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USERNAME }}
+          key: ${{ secrets.EC2_PRIVATE_KEY }}
+          envs: APPLICATION_PROPERTIES
+          script_stop: true
+          script: |
+            cd /home/ubuntu/Project-MusicStreaming-Team-Dive
+            rm -rf src/main/resources/application.yml
+            git pull origin main
+            echo "$APPLICATION_PROPERTIES" > src/main/resources/application.yml
+            sudo ./gradlew clean build
+            sudo fuser -k -n tcp 8070 || true
+            nohup java -jar build/libs/*SNAPSHOT.jar > ./output.log 2 > &1&
+            cd TeamDive_Client/
+            sudo npm run build
+            cd ../TeamDive_Admin/
+            sudo npm run build
+            sudo systemctl restart nginx

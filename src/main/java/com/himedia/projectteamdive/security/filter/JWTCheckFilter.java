@@ -284,9 +284,6 @@ public class JWTCheckFilter extends OncePerRequestFilter {
         if(path.startsWith("/membership/checkActiveMembership")){
             return true;
         }
-        if(path.startsWith("/AI/addRecommendList")){
-            return true;
-        }
 
         // 비밀번호 변경을위한 추가사항
         if(path.startsWith("/member/findByMemberId")){
@@ -301,20 +298,6 @@ public class JWTCheckFilter extends OncePerRequestFilter {
         if(path.startsWith("/member/sendEmailForPassword")){
             return true;
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 //        if(path.startsWith("/music/getPlaylistPage")){
 //            return true;
