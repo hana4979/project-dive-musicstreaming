@@ -14,7 +14,7 @@ import java.util.HashMap;
 import java.util.List;
 
 @RestController
-@RequestMapping("/mp3")
+@RequestMapping("/api/mp3")
 public class Mp3Controller {
     @Autowired
     Mp3Service ms;

@@ -9,6 +9,7 @@ import AlbumDetail from "./components/detail/AlbumDetail";
 import PopularChart from "./components/PopularChart";
 import Storage from "./components/storage/storage";
 import { PlaylistPage } from "./components/playlist/PlaylistPage";
+import ForgottenPassword from "./components/member/ForgottenPassword"
 
 
 import PaymentsCheckout from "./components/payments/PaymentsCheckout";
@@ -41,6 +42,8 @@ function AppRoutes({mood, setMood}) {
             <Route path="/login" element={<LoginPage />} />
             <Route path="/kakaoLogin/:memberId" element={<KakaoLogin />} />
             <Route path="/sign-up" element={<JoinForm />} />
+            <Route path="/forgottenPassword" element={<ForgottenPassword />} />
+            
 
             <Route path="/music/:musicId" element={<MusicDetail />} />
             <Route path="/album/:albumId" element={<AlbumDetail />} />

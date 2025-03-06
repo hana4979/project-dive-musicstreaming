@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import loginStyles from '../../css/login.module.css';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { Cookies } from 'react-cookie';
 import { useSelector, useDispatch } from 'react-redux';
 import { loginAction } from '../../store/UserSlice';
@@ -75,7 +75,7 @@ const LoginPage =() => {
                         </button>
                     </div>
                 </form>
-                <a href="#" className={loginStyles.forgotPassword}>비밀번호를 잊으셨나요?</a>
+                <Link to='/forgottenPassword' className={loginStyles.forgotPassword}>비밀번호를 잊으셨나요?</Link>
             </div>
         </div>
       );

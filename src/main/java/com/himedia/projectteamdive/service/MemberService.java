@@ -108,4 +108,10 @@ public class MemberService {
         member.setMemberRoleList(roles);
         return true;
     }
+
+    public Member resetPassword(String memberId) {
+        Member updateMember = mr.findByMemberId(memberId);
+        updateMember.setPassword("");
+        return updateMember;
+    }
 }

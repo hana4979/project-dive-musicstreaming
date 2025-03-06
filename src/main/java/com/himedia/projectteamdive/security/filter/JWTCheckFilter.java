@@ -175,8 +175,20 @@ public class JWTCheckFilter extends OncePerRequestFilter {
         if(path.startsWith("/api/music/getPlaylistPage")){
             return true;
         }
+        if(path.startsWith("/api/member/findByMemberId")){
+            return true;
+        }
+        if(path.startsWith("/api/member/resetPassword")){
+            return true;
+        }
+        if(path.startsWith("/api/member/emailCheck")){
+            return true;
+        }
+        if(path.startsWith("/api/member/sendEmailForPassword")){
+            return true;
+        }
 
-
+//=========================================================================================
 
         if(path.startsWith("/member/login")){
             return true;
@@ -275,6 +287,35 @@ public class JWTCheckFilter extends OncePerRequestFilter {
         if(path.startsWith("/AI/addRecommendList")){
             return true;
         }
+
+        // 비밀번호 변경을위한 추가사항
+        if(path.startsWith("/member/findByMemberId")){
+            return true;
+        }
+        if(path.startsWith("/member/resetPassword")){
+            return true;
+        }
+        if(path.startsWith("/member/emailCheck")){
+            return true;
+        }
+        if(path.startsWith("/member/sendEmailForPassword")){
+            return true;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //        if(path.startsWith("/music/getPlaylistPage")){
 //            return true;
 //        }

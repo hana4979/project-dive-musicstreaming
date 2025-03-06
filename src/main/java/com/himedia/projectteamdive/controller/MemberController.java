@@ -29,9 +29,8 @@ import java.net.URL;
 import java.util.*;
 
 @RestController
-@RequestMapping("/member")
+@RequestMapping("/api/member")
 public class MemberController {
-
 
     @Autowired
     MemberService ms;
@@ -295,6 +294,32 @@ public class MemberController {
         map.put("member",members);
         return map;
     }
+
+    @GetMapping("/findByMemberId")
+    public HashMap<String, Object> getByMemberId(@RequestParam("memberId") String memberId) {
+        HashMap<String, Object> result = new HashMap<>();
+        Member member = ms.getMember(memberId);
+
+        if (member != null) {
+            result.put("msg", "yes");
+            result.put("member", member);
+        } else {
+            result.put("msg", "no");
+        }
+
+        return result;
+    }
+
+    @PostMapping("/resetPassword")
+    public HashMap<String, Object> resetPassword(@RequestParam("memberId")String memberId){
+        HashMap<String, Object> result = new HashMap<>();
+        Member member = ms.resetPassword(memberId);
+        result.put("msg", "yes");
+        return result;
+    }
+
+
+
 }
 
 

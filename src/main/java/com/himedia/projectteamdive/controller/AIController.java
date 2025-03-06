@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.HashMap;
 
 @RestController
-@RequestMapping("/AI")
+@RequestMapping("/api/AI")
 public class AIController {
 
     @Autowired
