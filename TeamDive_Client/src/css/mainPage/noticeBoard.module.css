@@ -1,0 +1,27 @@
+/* src/css/noticeBoard.module.css */
+.noticeBoard {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .noticeItem {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+  }
+  
+  .noticeItem:hover {
+    background: rgba(255, 64, 129, 0.2);
+  }
+  
+  .noticeItem h3 {
+    margin: 0 0 5px;
+  }
+  
+  .noticeItem p {
+    margin: 0;
+    font-size: 14px;
+  }
+  

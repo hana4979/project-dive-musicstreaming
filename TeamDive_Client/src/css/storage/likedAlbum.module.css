@@ -1,0 +1,169 @@
+.albumContainer {
+  background-color: #111;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 6px rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-family: sans-serif;
+}
+
+.sectionTitle {
+  font-size: 1.8rem;
+  margin-top: 1rem;
+  color: white;
+  text-align: center;
+}
+
+.emptyMessage {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+/* 그리드 */
+.albumGrid {
+  display: grid;
+  gap: 5.2rem;
+  /* 카드들을 가로로 배치하되, 각 셀에서 가운데 정렬 */
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  justify-items: center; /* 카드 중앙 정렬 */
+}
+
+/* flip card 컨테이너 */
+.flipCard {
+  background-color: transparent;
+  width: 240px;
+  height: 340px;
+  /* 3D 공간 */
+  perspective: 1000px;
+  /* 관찰 시점 중앙 (카드가 제자리서 회전) */
+  perspective-origin: 50% 50%;
+  margin: 0 auto;
+}
+
+.flipCardInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  /* 회전 기준점 중앙 */
+  transform-origin: 50% 50%;
+}
+
+.flipCard:hover .flipCardInner {
+  transform: rotateY(180deg);
+}
+
+/* 앞면, 뒷면 공통 */
+.flipCardFront,
+.flipCardBack {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+}
+
+/* 앞면 */
+.flipCardFront {
+  background: #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 앨범 커버 이미지 */
+.coverImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.flipCardBack {
+  transform: rotateY(180deg);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center;
+  gap: 1rem;
+  border-radius: 10px;
+  position: relative;
+}
+
+/* 뒷면 배경에 앞면 이미지 추가 */
+.flipCardBack::before {
+  content: '';
+  background-image: inherit; /* 앞면 이미지 사용 */
+  background-size: cover;
+  filter: blur(5px);
+  opacity: 0.9;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.flipCardContent {
+  position: relative;
+  z-index: 2; /* 배경 이미지 위에 콘텐츠가 오도록 설정 */
+}
+
+.albumTitle {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0;
+  text-align: center;
+  color: white; 
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+/* 가수 이름 (조금 작게, 세련되게) */
+.artistName {
+  font-size: 0.9rem;
+  margin: 0;
+  color: #eee;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.4);
+}
+
+/* 버튼 행 */
+.buttonRow {
+  display: flex;
+  gap: 0.8rem; 
+  margin-top: 0.5rem;
+}
+
+/* 좋아요 버튼 (하트) */
+.heartBtn {
+  background: none;
+  border: 2px solid hotpink;
+  border-radius: 4px;
+  color: hotpink;
+  font-size: 1rem;
+  padding: 0.3rem 0.6rem;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+  box-shadow: 0 0 0px hotpink;
+}
+.heartBtn:hover {
+  background: hotpink;
+  color: #000;
+  box-shadow: 0 0 8px 2px hotpink;
+}
+
+/* 상세보기 버튼 */
+.detailBtn {
+  background: none;
+  border: 2px solid #00bfff;
+  border-radius: 4px;
+  color: #00bfff;
+  font-size: 1rem;
+  padding: 0.3rem 0.6rem;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+}

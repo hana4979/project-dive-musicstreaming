@@ -1,0 +1,234 @@
+
+.playlistContainer {
+    width: 100%;
+    min-height: 80vh;
+    background: #000;
+    color: #fff;
+    padding: 1rem;
+  }
+  
+  .sectionTitle {
+    font-size: 1.8rem;
+    margin-top: 1rem;
+    color: hotpink;
+    text-align: center;
+  }
+  
+
+  .playlistGrid {
+    display: flex;
+    gap: 1.4rem;
+    flex-wrap: wrap;
+  }
+  
+
+  .playlistTile {
+    width: 220px;
+    height: 220px;
+    background: #1c1c1c;
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .playlistTile:hover {
+    background: #2a2a2a;
+  }
+  
+
+  .addIcon {
+    font-size: 7rem;
+    color: #fff;
+    margin-bottom: 0.3rem;
+    font-weight: bold;
+  }
+  
+
+  .coverPlaceholder {
+    width: 100%;
+    height: 120px;
+    background-color: #333;
+    border-radius: 4px;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 0.3rem;
+    
+    background-repeat: repeat;
+    
+  }
+  
+
+  .tileTitle {
+    font-size: 0.9rem;
+    margin: 0;
+    text-align: center;
+    color: #ddd;
+  }
+  .tileTrackCount {
+    font-size: 0.7rem;
+    color: #666;
+  }
+  
+
+  .modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+  }
+  
+
+  .modalContainer {
+    background: #1c1c1c;
+    width: 400px;
+    max-width: 80%;
+    border-radius: 8px;
+    padding: 1rem;
+    box-sizing: border-box;
+    position: relative;
+    
+  }
+
+  .modalTitle {
+    font-size: 1.2rem;
+    color: #fff;
+    margin: 0 0 1rem 0;
+  }
+
+  .modalContent {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .coverPreview {
+    width: 80px;
+    height: 80px;
+    background: #333;
+    border-radius: 4px;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3;
+  }
+  
+
+  .formArea {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+
+  .titleInput,
+  .descInput {
+    width: 100%;
+    background: #2a2a2a;
+    border: 1px solid #444;
+    border-radius: 4px;
+    color: #fff;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    font-size: 0.9rem;
+  }
+  
+  .descInput {
+    height: 150px;
+    resize: none;
+  }
+  
+ 
+  .publicCheck {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: #fff;
+    font-size: 0.9rem;
+  }
+  
+  .publicDesc {
+    margin: 0;
+    font-size: 0.75rem;
+    color: #999;
+    line-height: 1.2;
+  }
+  
+  .modalButtons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+  }
+  
+
+  .cancelBtn,
+  .addBtn {
+    background: #333;
+    border: 1px solid #555;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 0.9rem;
+    padding: 0.3rem 1rem;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, border 0.2s;
+  }
+  
+  .cancelBtn:hover {
+    background: #444;
+  }
+
+  .addBtn:hover {
+    background: #444;
+  }
+
+
+
+  /* coverPreview 영역 */
+.coverPreview {
+  width: 80px;
+  height: 80px;
+  background: #333;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.coverImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* 파일 입력 숨기거나 꾸미기 */
+.fileInput {
+  margin-bottom: 0.5rem;
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+/* 만약 추가 placeholder2 */
+.coverPlaceholder2 {
+  width: 100%;
+  height: 100%;
+  background: #444;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #777;
+  font-size: 1.2rem;
+}
+
+  

@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+/* 최상위 컨테이너 */
+.updateContainer {
+  max-width: 900px;
+  margin: 40px auto;
+  background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 30px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* 제목 */
+.updateTitle {
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 30px;
+  color: white;
+}
+
+/* 이미지 섹션 */
+.imageSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.profilePreview {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 3px solid rgba(255, 255, 255, 0.2);
+}
+
+
+.formSection {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.formColumns {
+  display: flex;
+  gap: 40px; 
+  flex-wrap: wrap; 
+}
+
+
+.formColumn {
+  flex: 1; 
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.formGroup label {
+  font-weight: 600;
+  color: #ff9f43;
+}
+
+
+.zipcodeRow {
+  display: flex;
+  gap: 10px;
+}
+
+
+.formSection input[type='text'],
+.formSection input[type='password'],
+.formSection textarea {
+  background: #222;
+  border: 1px solid #444;
+  border-radius: 4px;
+  color: #fff;
+  padding: 8px;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.formSection input[type='text']:focus,
+.formSection input[type='password']:focus,
+.formSection textarea:focus {
+  border-color: #ff9f43;
+}
+
+
+.buttonGroup {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+.submitButton {
+  background: #0d66a1;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  padding: 10px 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+
+.deleteButton {
+  
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  padding: 10px 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.submitButton:hover {
+  background: #5289ad;
+}
+
+
+.deleteButton {
+  background: #e74c3c;
+}
+.deleteButton:hover {
+  background: #ff6f61;
+}

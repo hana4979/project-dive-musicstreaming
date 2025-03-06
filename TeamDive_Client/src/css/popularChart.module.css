@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+
+  --secondary-color: #ffffff;
+  --bg-color: #000000;
+  --card-bg: rgba(255, 255, 255, 0.1);
+  --border-color: rgba(255, 255, 255, 0.2);
+  --shadow-color: rgba(255, 64, 129, 0.5);
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--secondary-color);
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.pageTitle {
+  color: #ff4081 !important;
+  font-family: 'Ownglyph_ParkDaHyun';
+  font-size: 47px;
+  font-weight: 700;
+  text-align: center;
+  color: var(--primary-color);
+  text-shadow: 0px 0px 15px var(--shadow-color);
+  margin-bottom: 40px;
+  letter-spacing: 2px;
+}
+
+.section {
+  margin-bottom: 50px;
+}
+
+/* 섹션 헤더: 제목과 더보기 버튼을 한 줄에 배치 */
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.sectionTitle {
+  font-family: 'Ownglyph_ParkDaHyun';
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--primary-color);
+  text-shadow: 0px 0px 10px var(--shadow-color);
+  padding-bottom: 5px;
+  border-bottom: 2px solid var(--primary-color);
+  display: inline-block;
+}
+
+.moreButton {
+    background: transparent;
+    border: none;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  .dot {
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    margin: 0 3px;
+    opacity: 0.8;
+    transition: transform 0.3s ease;
+  }
+  
+
+  .moreButton:hover .dot {
+    animation: bounce 0.6s infinite;
+  }
+  
+  .moreButton:hover .dot:nth-child(1) {
+    animation-delay: 0s;
+  }
+  .moreButton:hover .dot:nth-child(2) {
+    animation-delay: 0.1s;
+  }
+  .moreButton:hover .dot:nth-child(3) {
+    animation-delay: 0.2s;
+  }
+  
+    @keyframes bounce {
+        0%, 100% {
+        transform: translateY(0);
+        }
+        50% {
+        transform: translateY(-8px);
+        }
+    }
+
+.chartGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  justify-content: center;
+}
+
+.card {
+  background: var(--card-bg);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: scale(1.08);
+  box-shadow: 0 5px 25px var(--shadow-color);
+}
+
+.rank {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--primary-color);
+  background: var(--border-color);
+  padding: 5px 12px;
+  border-radius: 8px;
+  backdrop-filter: blur(5px);
+}
+
+.cardImage {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover .cardImage {
+  transform: scale(1.05);
+}
+
+.cardContent {
+  margin-top: 15px;
+}
+
+.cardTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--secondary-color);
+}
+
+.cardArtist {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.cardPlayCount,
+.cardLike {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.likeButton {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  font-size: 22px;
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+}
+
+.likeButton:hover {
+  color: white;
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+  .chartGrid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+
+  .cardImage {
+    height: 140px;
+  }
+}

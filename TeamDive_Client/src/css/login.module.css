@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+.loginPage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%; /* 화면 전체 높이 */
+  width: 100%;
+  background: linear-gradient(135deg, #000000, #1a1a1a);
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.15); /* 투명도를 더 높여 유리 효과 강화 */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  padding: 50px;
+  width: 350px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(20px); /* 더 강한 글라스 효과 */
+  -webkit-backdrop-filter: blur(20px);
+  text-align: center;
+  color: #fff;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* 로그인창 모션 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.container h1 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #ff4081;
+  text-shadow: 2px 2px 10px rgba(255, 64, 129, 0.5);
+}
+
+.formGroup {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.formGroup label {
+  display: block;
+  font-size: 15px;
+  font-weight: 600;
+  color: #ddd;
+  margin-bottom: 5px;
+}
+
+.formGroup input {
+  width: 90%;
+  padding: 12px 15px;
+  border: none;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+}
+
+/* 입력창 포커스 시 효과 */
+.formGroup input:focus {
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 10px rgba(255, 64, 129, 0.5);
+}
+
+/* 입력창 placeholder 색상 */
+.formGroup input::placeholder {
+  color: #bbb;
+  font-style: italic;
+}
+
+/* 로그인 버튼 */
+.button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #ff4081, #ff79a9);
+  color: #fff;
+  font-size: 17px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(255, 64, 129, 0.5);
+}
+
+/* 버튼 hover 효과 */
+.button:hover {
+  background: linear-gradient(90deg, #ff79a9, #ff4081);
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(255, 64, 129, 0.8);
+}
+
+/* 버튼 클릭 효과 */
+.button:active {
+  transform: scale(0.98);
+}
+
+/* 비밀번호 찾기 링크 */
+.forgotPassword {
+  display: block;
+  margin-top: 15px;
+  font-size: 14px;
+  color: #ddd;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+/* 비밀번호 찾기 hover */
+.forgotPassword:hover {
+  text-decoration: underline;
+  color: #ff4081;
+}
+/* 기존 스타일은 그대로 유지하고, 추가 스타일만 정의 */
+
+.kakaoLoginContainer {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.kakaoButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fee500; /* Kakao 노란색 */
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.kakaoButton:hover {
+  background-color: #f7dc00;
+}
+
+.kakaoLogo {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+
+.kakaoButton span {
+  font-size: 16px;
+  font-weight: 600;
+  color: #3c1e1e; /* Kakao 로고와 어울리는 다크 레드 계열 */
+}

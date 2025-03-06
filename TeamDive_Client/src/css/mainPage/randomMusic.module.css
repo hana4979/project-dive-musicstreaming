@@ -1,0 +1,89 @@
+.randomMusicContainer {
+    background-color: black;
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 650px;
+     
+
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  /* 제목 */
+  .title {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: white;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-right: 50px;
+  }
+  
+  /* 곡 카드 */
+  .songCard {
+    background-color: #222;
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .songCard:hover {
+    background-color: #333;
+  }
+  
+  /* 곡 이미지 */
+  .songImage {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+  
+  /* 곡 정보 */
+  .songInfo {
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .songTitle {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 10px 110px 10px 40px;
+    width: 240px;
+  }
+  
+  .songArtist {
+    font-size: 0.85rem;
+    color: #ccc;
+  }
+  
+  /* 로딩 문구 */
+  .loading {
+    font-size: 1rem;
+    color: #ccc;
+  }
+  
+  /* 새 곡 보기 버튼 */
+  .refreshButton {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .refreshButton:hover {
+    background-color: #ccc;
+    color: black;
+  }
+  

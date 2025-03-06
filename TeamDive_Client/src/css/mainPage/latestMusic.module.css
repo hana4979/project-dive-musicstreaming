@@ -1,0 +1,48 @@
+/* src/css/latestMusic.module.css */
+.latestMusic {
+    display: flex;
+    gap: 32px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    width: 100%;
+  }
+  
+  .songItem {
+    
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    padding: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .songItem:hover {
+    transform: translateY(-5px);
+  }
+  
+  .albumCover {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+  
+  .songDetails {
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  .songDetails h4 {
+    font-size: 16px;
+    width: 110px;
+    margin: 0 auto;
+    white-space: nowrap;       /* 한 줄로 표시 */
+    overflow: hidden;          /* 넘치는 부분 숨기기 */
+    text-overflow: ellipsis;   /* 넘친 텍스트는 ...으로 표시 */
+  }
+  
+  .songDetails p {
+    font-size: 14px;
+    color: #cccccc92;
+    margin: 5px 0 0;
+  }
+  

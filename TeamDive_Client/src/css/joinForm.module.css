@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+.joinPage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #000, #1a1a1a);
+  font-family: 'Montserrat', sans-serif;
+  padding: 20px;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  padding: 40px;
+  width: 600px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  text-align: center;
+  color: #fff;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.progressContainer {
+  margin-bottom: 20px;
+}
+
+.progressText {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #ff4081;
+  font-weight: 600;
+}
+
+.progressBarBackground {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  height: 12px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.progressBar {
+  background: linear-gradient(90deg, #ff4081, #ff79a9);
+  height: 100%;
+  width: 50%; /* React에서 동적으로 변경 */
+  transition: width 0.5s ease-in-out;
+}
+
+.formGroup {
+  margin: 15px auto;
+  text-align: left;
+  width: 100%;
+  max-width: 300px;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ddd;
+}
+
+.formGroup input,
+.formGroup select {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  font-size: 14px;
+  outline: none;
+  transition: border 0.3s ease, background 0.3s ease;
+}
+
+.formGroup input:focus,
+.formGroup select:focus,
+.formGroup textarea {
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 10px rgba(255, 64, 129, 0.5);
+  border-color: #ff4081;
+}
+
+.profilePreview {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 3px solid rgba(255, 255, 255, 0.2);
+}
+
+
+.emailInputGroup {
+  display: flex;
+  align-items: center;
+}
+
+.emailInputGroup input {
+  flex: 1;
+  margin-right: 5px;
+}
+
+.emailInputGroup select {
+  flex: 1;
+}
+
+.inputCondition {
+  font-size: 12px;
+  margin-left: 8px;
+  font-weight: 500;
+}
+
+.buttonGroup {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #ff4081, #ff79a9);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+  box-shadow: 0 4px 10px rgba(255, 64, 129, 0.5);
+}
+
+.button:hover {
+  background: linear-gradient(90deg, #ff79a9, #ff4081);
+  transform: scale(1.05);
+}
+
+.button:active {
+  transform: scale(0.95);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

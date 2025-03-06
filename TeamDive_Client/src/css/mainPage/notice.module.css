@@ -1,0 +1,22 @@
+.noticeContainer {
+    display: flex;
+    align-items: center;
+    
+    gap: 5px;
+    color: #fff;
+    width: 300px;
+  }
+  
+  .noticeLabel {
+    font-weight: 600;
+    color: #068f78;
+  }
+  
+  .noticeText {
+    font-size: 0.9rem;
+   
+    
+  }
+  
+
+  

@@ -1,0 +1,167 @@
+.sectionContainer {
+  background-color: #111;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-family: sans-serif;
+}
+
+.sectionTitle {
+  font-size: 1.8rem;
+  margin-top: 1rem;
+  color: hotpink;
+  text-align: center;
+}
+
+.emptyMessage {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+/* 상단 바 (전체선택, 전체재생, 전체구매) */
+.topBar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.checkAllLabel {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.topBtn {
+  background: #444;
+  border: none;
+  border-radius: 4px;
+  color: #ccc;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.topBtn:disabled {
+  background: #333;
+  color: #666;
+  cursor: not-allowed;
+}
+
+.topBtn:hover:enabled {
+  background: hotpink;
+  color: #fff;
+}
+
+/* 노래 리스트 (세로 배치) */
+.songList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* 한 곡(행)을 가로로: Grid로 배치 */
+.songRow {
+  display: grid;
+  grid-template-columns: 30px 60px 2fr 1.5fr 1fr auto auto;
+  /* 
+    30px: 체크박스
+    60px: 앨범커버
+    2fr: 제목
+    1.5fr: 가수
+    1fr: 장르
+    auto: MP3구매
+    auto: 하트
+  */
+  align-items: center;
+  gap: 10px;
+  background: #222;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  transition: background 0.2s;
+}
+
+.songRow:hover {
+  background: #2c2c2c;
+}
+
+/* 체크박스 */
+.rowCheckbox {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+/* 앨범 커버 */
+.coverWrapper {
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.coverImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 제목 */
+.title {
+  font-weight: bold;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.titleLink {
+  color: #fff;
+  text-decoration: none;
+}
+
+.titleLink:hover {
+  color: hotpink;
+}
+
+/* 가수 */
+.artist {
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+/* 장르 */
+.genre {
+  color: #ccc;
+  font-size: 0.85rem;
+}
+
+/* MP3 구매 버튼 */
+.buyBtn {
+  background: #444;
+  border: none;
+  border-radius: 4px;
+  color: #ccc;
+  padding: 0.3rem 0.6rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.buyBtn:hover {
+  background: hotpink;
+  color: #fff;
+}
+
+/* 좋아요(하트) 버튼 */
+.heartBtn {
+  background: none;
+  border: none;
+  color: hotpink;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.heartBtn:hover {
+  opacity: 0.8;
+}

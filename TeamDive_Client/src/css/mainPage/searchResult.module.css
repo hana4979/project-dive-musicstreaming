@@ -1,0 +1,204 @@
+.searchSection {
+  /* 섹션 전체 스타일 */
+  margin-bottom: 100px;
+  padding: 10px;          
+  border-radius: 8px;   
+  background-color: black; 
+}
+
+.sectionHeader {
+    display: flex;
+    align-items: center;        
+    margin-bottom: 10px;
+    gap: 70px;          
+  }
+
+
+.sectionHeader button {
+    background-color: black;
+    color: #d9d8d8da;
+    border: none;
+    margin-bottom: -7px;
+    cursor: pointer;
+}
+
+
+.resultContainer_music {
+  display: grid;
+  grid-template-columns: repeat(4, 400px);
+  gap: 20px;
+  justify-content: left; 
+
+}
+
+
+.searchResult_music {
+  display: flex;
+  align-items: center;   
+  background-color: black;
+  box-sizing: border-box;
+}
+
+
+.imageCard_music {
+  width: 60px;
+  height: 60px;
+  margin-right: 30px;
+  border-radius: 4px;      
+  object-fit: cover;     
+
+}
+
+
+.musicInfo p {
+  margin: 0;
+  line-height: 1.4; 
+  color: #666;      
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+
+.musicInfo p:first-of-type {
+    color: white;
+  font-weight: bold; 
+}
+
+.musicInfo p:last-child:hover {
+    border-bottom: 1px solid #333;
+}
+
+
+
+
+.resultContainer_artist {
+    display: flex;
+ 
+    gap: 30px;
+}
+
+.searchResult_artist {
+  
+    width: 202px;
+    height: 230px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.imageCard_artist {
+    border-radius: 100%;
+
+    width: 100%;
+    height: 80%;
+    object-fit: cover;     
+}
+
+
+
+
+.resultContainer_album {
+    display: flex;
+   
+    gap: 30px;
+}
+
+
+.searchResult_album {
+    width: 202px;
+    height: 280px;
+
+    text-align: center;
+    cursor: pointer;
+}
+.imageCard_album {
+
+    width: 202px;
+    height: 80%;
+    object-fit: cover;     
+}
+
+
+
+.resultContainer_playlist {
+    display: flex;
+
+    gap: 30px;
+}
+
+
+.searchResult_playlist {
+    width: 202px;
+    height: 280px;
+
+    text-align: center;
+    cursor: pointer;
+}
+.imageCard_playlist {
+
+    width: 202px;
+    height: 80%;
+    object-fit: cover;     
+}
+
+
+.resultContainer_lyrics {
+    display: grid;
+    grid-template-columns: repeat(3, 400px);
+    gap: 20px;
+    justify-content: left;
+  }
+  
+ 
+  .searchResult_lyrics {
+    display: flex;
+    flex-direction: column;  
+    background-color: black;
+    box-sizing: border-box;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 10px;
+  }
+  
+
+  .lyricsTop {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; 
+  }
+  
+
+  .imageCard_lyrics {
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+    border-radius: 4px;
+    object-fit: cover;
+  }
+  
+ 
+  .musicInfo p {
+    margin: 0;
+    line-height: 1.4;
+    color: #666;
+    font-size: 0.9rem;
+    cursor: pointer;
+  }
+  
+  .musicInfo p:first-of-type {
+    color: white;
+    font-weight: bold;
+  }
+  
+  .musicInfo p:last-child:hover {
+    border-bottom: 1px solid #333;
+  }
+  
+
+  .lyricsText {
+    color: #999;
+    font-size: 0.85rem;
+    margin-top: 20px; 
+    line-height: 1.4;
+   
+  }
+  

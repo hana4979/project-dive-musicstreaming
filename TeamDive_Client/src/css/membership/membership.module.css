@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+.membershipPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+
+/* 네비게이션 바 스타일 */
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 15px 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    flex-wrap: wrap; /* 메뉴가 줄어들 때 항목들이 줄바꿈되도록 함 */
+}
+
+/* 네비게이션 링크 스타일 */
+.link {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0 15px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    white-space: nowrap; /* 텍스트 줄 바꿈 방지 */
+    display: inline-block; /* 요소가 부모 요소의 크기에 맞춰 조정되도록 설정 */
+    text-align: center; /* 텍스트를 가운데 정렬 */
+}
+
+.link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+/* 컨테이너 스타일 */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 왼쪽 정렬 */
+    width: 100%;
+    max-width: 800px; /* VIBE 스타일 반영 */
+    padding: 20px;
+}
+
+/* 개별 아이템 (구독 옵션) */
+.item {
+    width: 100%;
+    max-width: 800px; /* 가로로 길게 */
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease;
+    box-sizing: border-box;
+}
+
+.item:hover {
+    transform: scale(1.02);
+    backdrop-filter: none; /* 호버 시 블러 제거 */
+}
+
+/* 제목 */
+.title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+/* 설명 */
+.content {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 10px;
+}
+
+/* 가격 및 버튼 */
+.subscribe {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.discount {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #ff4081; /* 새로운 포인트 컬러 */
+}
+
+.original {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: line-through;
+}
+
+/* 구독 버튼 */
+.subscribe button {
+    background: linear-gradient(90deg, #ff4081, #ff1e63); /* 분홍 계열 그라디언트 */
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.0rem;
+    font-weight: 600;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.subscribe button:hover {
+    background: linear-gradient(90deg, #ff1e63, #ff4081);
+    transform: scale(1.05);
+}
+
+/* 반응형 스타일 */
+@media (max-width: 1024px) {
+    .container {
+        max-width: 90%;
+    }
+    .item {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .subscribe {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .subscribe button {
+        margin-top: 10px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 1.5rem;
+    }
+    .content {
+        font-size: 0.9rem;
+    }
+    .discount {
+        font-size: 1.3rem;
+    }
+    .original {
+        font-size: 0.9rem;
+    }
+    .subscribe button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}

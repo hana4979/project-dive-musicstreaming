@@ -1,0 +1,93 @@
+.likeRankingSection {
+  background-color: black;
+  padding: 20px;
+  border-radius: 8px;
+  color: #fff;
+  width: 500px;
+}
+
+.sectionTitle {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  font-family: 'Ownglyph_ParkDaHyun', sans-serif;
+}
+
+/* 탭 버튼 영역 */
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+  justify-content: center;
+}
+.tab {
+  background-color: transparent;
+  border: 1px solid #888;
+  color: #ccc;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.tab:hover {
+  background-color: #444;
+}
+.tab.active {
+  background-color: #888;
+  color: #fff;
+}
+
+/* 랭킹 목록 */
+.rankList {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-direction: column; /* 세로로 하나씩 */
+}
+
+/* 개별 아이템 */
+.rankItem {
+  background-color: black;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+}
+.rankItem:hover {
+  background-color: #333;
+}
+
+.rank {
+  font-weight: bold;
+  font-size: 1rem;
+  color: white;
+}
+
+.rankImage {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+
+.infoArea {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* 제목 */
+.title {
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin: 0;
+  color: #fff;
+}
+
+/* 노래 탭일 때 제목 옆에 아티스트 표시 */
+.artistRight {
+  font-size: 0.8rem;
+  color: #ccc;
+}

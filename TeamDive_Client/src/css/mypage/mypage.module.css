@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+
+.mypageMenu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 15px 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  flex-wrap: wrap; 
+  font-family: 'Montserrat', sans-serif;
+  margin: 0 auto;
+}
+
+
+.mypageMenuLink {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 15px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  white-space: nowrap; 
+  display: inline-block;
+  text-align: center;
+}
+
+.mypageMenuLink:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+
+
+
+
+.mypageSection {
+  display: block;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  margin: 20px;
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+}
+
+
+.mypageInfo {
+  display: block;
+  margin-bottom: 30px;
+}
+
+
+.mypageProfile {
+  display: flex;
+  padding: 20px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.3);
+  gap: 20px; /* 프로필 이미지와 정보 사이 간격 */
+}
+
+
+.mypageProfileImage {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+}
+
+
+.mypageProfileDetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+}
+
+
+.mypageField {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 350px;
+}
+
+.mypageField label {
+  margin-right: 30px;
+  font-weight: 600;
+  min-width: 80px;
+  color: #ff9f43;
+}
+
+
+.mypageMembership {
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+
+.mypageMembershipUser {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+  gap: 10px;
+}
+
+.mypageMembershipUser button {
+  background: #bc4929;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  padding: 6px 12px;
+  cursor: pointer;
+  margin-left: auto; 
+  transition: background 0.3s;
+}
+.mypageMembershipUser button:hover {
+  background: #ffa860;
+}

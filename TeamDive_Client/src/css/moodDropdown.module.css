@@ -1,0 +1,40 @@
+.moodDropdownContainer {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .moodButton {
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #444;
+    border-radius: 4px;
+    padding: 8px 12px;
+    cursor: pointer;
+  }
+  
+  .moodDropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: flex; /* 가로 배치 */
+    gap: 8px;
+    background-color: #222;
+    border: 1px solid #444;
+    border-radius: 4px;
+    padding: 8px;
+    margin-top: 4px;
+    z-index: 999;
+  }
+  
+  .moodOption {
+    background-color: #333;
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .moodOption:hover {
+    background-color: #444;
+  }
+  

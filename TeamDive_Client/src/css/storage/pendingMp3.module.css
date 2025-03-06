@@ -1,0 +1,209 @@
+.container {
+    width: 100%;
+    margin: auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.mp3Container {
+    background-color: #111;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-top: 2rem;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-family: sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.deleteButton {
+    background-color: #262626;
+    border-radius: 2px;
+    color: #fff;
+    display: inline-block;
+    font-size: 13px;
+    line-height: 28px;
+    padding: 0 10px;
+    vertical-align: top;
+}
+
+.musicItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.musicItemHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 2px solid #999;
+    border-bottom: 1px solid #999;
+    padding: 0 10px;
+    color: gray;
+}
+
+.info {
+    display: flex;
+    flex: 1;
+    margin-left: 10px;
+}
+
+.musicInfo {
+    display: flex;
+    flex: 8;
+}
+
+.musicImage {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    border: 1px solid salmon;
+}
+
+.musicTitle {
+    flex: 3;
+}
+
+.musicArtist {
+    flex: 6;
+    color: gray;
+}
+
+.musicPrice {
+    flex: 2;
+}
+
+.musicDelete {
+    flex: 1;
+}
+
+.trashButton {
+    flex: 1;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: gray;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin-top: 20px;
+    border-top: 1px solid #999;
+}  
+
+.paymentContainer {
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 16px;
+    width: 320px;
+}
+
+.section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    gap: 10px;
+}
+
+.sectionTotal {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: 10px 0 10px 0;
+    padding: 20px 0 10px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ff0050;
+    border-top: 1px solid #2a2a2a;
+}
+
+.label {
+    font-size: 18px;
+    color: #b0b0b0;
+}
+
+.value {
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.valueRed {
+    font-size: 18px;
+    color: #ff0050;
+}
+
+.totalPrice {
+    font-size: 22px;
+    color: #ff0050;
+    font-weight: bold;
+}
+
+.taxInfo {
+    font-size: 18px;
+    color: #888888;
+    text-align: right;
+    width: 100%;
+    margin-top: -12px;
+}
+
+.checkboxSection {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.checkbox {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+}
+
+.termsButton {
+    margin-left: auto;
+    background-color: #2a2a2a;
+    color: #ffffff;
+    border: none;
+    padding: 4px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.termsButton:hover {
+    background-color: #3a3a3a;
+}
+
+.paymentButton {
+    width: 100%;
+    padding: 12px;
+    background-color: #ff4081;
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+    cursor: pointer;
+}
+  
+.paymentButton:disabled {
+    background-color: #1f1f1f;
+    color: #555555;
+    cursor: not-allowed;
+}
+  
+.paymentButton:not(:disabled):hover {
+    background-color: #e73370;
+    transition: background-color 0.3s ease;
+}
+  

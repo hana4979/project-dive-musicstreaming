@@ -1,0 +1,425 @@
+/* 최상위 컨테이너 */
+.container {
+  max-width: 1080px;
+  margin: 40px auto;
+  padding: 40px;
+  background: #000; /* 전체 배경 검정 */
+  color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.6);
+  font-family: 'Roboto', sans-serif;
+}
+
+/* 헤더 영역 (이미지 + 정보) */
+.header {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+
+  border-bottom: 1px solid #333;
+}
+
+
+.headerInfo {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+/* 커버 이미지 */
+.coverImage {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+
+.editCoverContainer {
+  display: flex;
+  flex-direction: column;
+  gap: px;
+  color: #ccc;
+}
+
+/* 정보 영역 */
+.info {
+  flex: 1; 
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* 플레이리스트 제목 */
+.title {
+  font-size: 37px;
+  margin: 0;
+  color: white;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.deleteBtn {
+  background: #e74c3c;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  padding: 5px 14px;
+  font-weight: 600;
+  margin-left: 57px;
+  cursor: pointer;
+  transition: background 0.3s;
+} 
+.deleteBtn:hover {
+  background: #ff6f61;
+}
+
+
+/* 연필 아이콘(수정 버튼) */
+.editIcon {
+
+  cursor: pointer;
+  color: #bbb;
+  transition: color 0.2s;
+  font-size: 20px;
+}
+
+.editIcon:hover {
+  color: #fff;
+}
+
+/* 플레이리스트 설명 */
+.content {
+  font-size: 1rem;
+  color: #ccc;
+  line-height: 1.4;
+  margin: 0;
+  /* 길면 스크롤하도록 하고 싶다면
+  max-height: 120px;
+  overflow-y: auto; 
+  */
+}
+
+/* 곡 수 */
+.trackCount {
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-top: auto;
+}
+
+
+.editForm {
+  background-color: black;
+  padding: 12px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.editForm label {
+  font-weight: 600;
+  color: #ccc;
+}
+
+.editInput
+{
+  width: 182px;
+  background: #333;
+  color: #fff;
+  border: 1px solid #666;
+  border-radius: 4px;
+  padding: 8px;
+  font-size: 0.95rem;
+  margin-top: 10px;
+}
+
+.editTextarea 
+{
+  background: #333;
+  color: #fff;
+  border: 1px solid #666;
+  border-radius: 4px;
+  padding: 8px;
+  font-size: 0.95rem;
+}
+
+.editTextarea {
+  resize: vertical; /* 세로 크기 조절 가능 */
+}
+
+.editButtonGroup {
+  display: flex;
+  gap: 10px;
+}
+
+.saveBtn{
+  background-color: #0d66a1;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.cancelBtn {
+  background: #333;
+  border: 1px solid #555;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 0.9rem;
+  padding: 0.3rem 1rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+}
+
+.saveBtn:hover{
+  background-color: #5289ad;
+}
+
+/* 로딩/오류 메시지 */
+.loading,
+.errorMsg {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 1.2rem;
+  color: #ff4081;
+}
+
+/* 노래 목록 래퍼 */
+.songList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* 개별 곡 카드 */
+.songItem {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  padding: 12px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.songItem:hover {
+  background-color: #111;
+}
+
+/* 곡 이미지 (앨범 커버) */
+.songImage {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* 곡 정보 (제목, 가수) */
+.songInfo {
+  display: flex;
+  flex-direction: row;
+}
+
+.songTitle {
+  font-weight: bold;
+  font-size: 1rem;
+  color: #fff;
+  margin-top: 20px;
+  width: 425px;
+}
+
+.songArtist {
+  font-size: 0.85rem;
+  color: #ccc;
+ 
+  margin-top: 20px;
+}
+
+.actionBar {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 15px;
+}
+
+.customCheckbox {
+  position: relative;
+  margin-top: -15px;
+  padding-left: 25px; 
+  cursor: pointer;
+  user-select: none;
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+.customCheckbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 16px;
+  width: 16px;
+  background-color: #444;
+  border-radius: 2px;
+  transition: background-color 0.2s;
+}
+
+.customCheckbox input:checked ~ .checkmark {
+  background-color: #aaa;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.customCheckbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.customCheckbox .checkmark:after {
+  left: 5px;
+  top: 1px;
+  width: 3px;
+  height: 8px;
+  border: solid #222;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.selectedActions button {
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #666;
+  border-radius: 4px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-right: 10px;
+}
+.selectedActions button:hover {
+  background-color: #444;
+}
+
+.songActions {
+  margin-left: auto;
+  display: flex;
+  gap: 8px;
+}
+
+
+
+
+
+.writer {
+  color: #666;
+  font-size: 15px;
+}
+
+
+.deleteBtn {
+  background: #e74c3c;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  padding: 5px 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: background 0.3s;
+} 
+.deleteBtn:hover {
+  background: #ff6f61;
+}
+
+
+.editCoverContainer
+
+.editFileLabel {
+  color: #ccc;
+  margin-bottom: 4px;
+}
+
+.previewPlaceholder {
+  width: 200px;
+  height: 200px;
+  background-color: #333;
+  margin-bottom: 10px;
+}
+
+/* 제목 입력창 크기 */
+.editTitleInput {
+  width: 40%;
+}
+
+/* 내용 textarea 크기 */
+.editContentTextarea {
+  width: 90%;
+}
+
+
+.likeButton {
+  background-color: transparent;
+  border: 2px solid black;
+  color: #ff4081;
+  font-size: 16px;
+  height: 27px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+
+
+.songTable {
+  font-size: 14px;
+  text-align: left;
+  color: #888;
+  padding: 12px;
+  border-bottom: 1px solid #333;
+  display: flex;
+}
+
+
+.thChk {
+  width: 10%;
+}
+.thTitle {
+  width: 40%;
+}
+.thArtist {
+  width: 25%;
+}
+.thActions {
+  width: 25%;
+}
+
+
+
+.iconButton {
+  background: none;
+  border: 1px solid #555;
+  color: #999;
+  border-radius: 4px;
+  padding: 5px 10px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.iconButton:hover {
+  background: #222;
+  color: #fff;
+}

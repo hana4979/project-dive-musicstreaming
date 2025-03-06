@@ -1,0 +1,28 @@
+/* src/css/todayWhatToListen.module.css */
+.todayContainer {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .albumCover {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .songInfo h3 {
+    margin: 0;
+    font-size: 22px;
+  }
+  
+  .songInfo p {
+    margin: 5px 0 0;
+    font-size: 16px;
+    color: #ccc;
+  }
+  

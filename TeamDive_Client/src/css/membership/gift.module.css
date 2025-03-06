@@ -1,0 +1,122 @@
+/* 기프트 컨테이너 */
+.giftContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* 제목 스타일 */
+.giftContainer h1 {
+    color: #333;
+    text-align: center;
+}
+
+.giftContainer h2 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;  /* h2 폰트 컬러를 검정색으로 수정 */
+}
+
+/* 입력 필드 스타일 */
+.field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 8px;
+    box-sizing: border-box;
+}
+
+.field label {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #333;
+}
+
+.field input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: all 0.3s ease-in-out;
+    box-sizing: border-box;
+}
+
+.field input:focus {
+    border-color: #ff4081;
+    box-shadow: 0 0 5px rgba(255, 64, 129, 0.3);
+    outline: none;
+}
+
+/* 상품 정보 */
+.productInfo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    border-radius: 8px;
+    background: #f8f8f8;
+    margin-top: 10px;
+}
+
+.productImage {
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.productDetails {
+    flex-grow: 1;
+}
+
+.productDetails .productName {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
+
+.productDetails .price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.productDetails .period {
+    font-size: 14px;
+    font-weight: bold;
+    color: #3b88e4;
+}
+
+/* 결제 버튼 */
+.paymentButton {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    background: linear-gradient(90deg, #ff4081, #ff1e63);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    margin-top: 16px;
+}
+
+.paymentButton:hover {
+    background: linear-gradient(90deg, #ff1e63, #ff4081);
+}
+
+/* 반응형 */
+@media (max-width: 480px) {
+    .giftContainer {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .paymentButton {
+        font-size: 14px;
+        padding: 12px;
+    }
+}
