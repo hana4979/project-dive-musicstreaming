@@ -9,11 +9,11 @@ jobs:
   My-Deploy-job:
     runs-on: ubuntu-latest # ubuntu 환경
     steps:
-      - name: Dive 프로젝트 배포
+      - name: Dive 프로젝트 서버 배포
         run: SSH로 EC2 접속 - 배포
         uses: appleboy/ssh-action@master
         env:
-          APPLICATION_PROPERTIES: ${{ secrets.APPLICATION_YML }}
+          APPLICATION_PROPERTIES: ${{ secrets.APPLICATION_YML }} # secret 에 작성한 yml 가져오기
         with:
           host: ${{ secrets.EC2_HOST }}
           username: ${{ secrets.EC2_USERNAME }}
@@ -21,15 +21,10 @@ jobs:
           envs: APPLICATION_PROPERTIES
           script_stop: true
           script: |
-            cd /home/ubuntu/Project-MusicStreaming-Team-Dive
+            cd /home/ubuntu/project-dive-musicstreaming
             rm -rf src/main/resources/application.yml
             git pull origin main
             echo "$APPLICATION_PROPERTIES" > src/main/resources/application.yml
             sudo ./gradlew clean build
             sudo fuser -k -n tcp 8070 || true
-            nohup java -jar build/libs/*SNAPSHOT.jar > ./output.log 2 > &1&
-            cd TeamDive_Client/
-            sudo npm run build
-            cd ../TeamDive_Admin/
-            sudo npm run build
-            sudo systemctl restart nginx
+            nohup java -jar build/libs/*SNAPSHOT.jar > ./output.log 2 >&1&
