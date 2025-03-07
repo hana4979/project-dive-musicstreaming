@@ -6,20 +6,20 @@ on:
       - main # main 브랜치에 push 될 때 아래의 workflow 를 실행
 
 jobs:
-  My-Deploy-job:
-    runs-on: ubuntu-latest # ubuntu 환경
-    steps:
+  My-Deploy-job: # GitHub Actions 에서 실행될 Job 이름
+    runs-on: ubuntu-latest # Actions 실행 환경
+    steps: # Job 이 실행될 단계 정의
       - name: Dive 프로젝트 서버 배포
         run: SSH로 EC2 접속 - 배포
-        uses: appleboy/ssh-action@master
-        env:
+        uses: appleboy/ssh-action@master # Actions 의 appleboy/ssh-action 을 사용하여 SSH 접속 수행
+        env: # 환경변수 설정
           APPLICATION_PROPERTIES: ${{ secrets.APPLICATION_YML }} # secret 에 작성한 yml 가져오기
         with:
-          host: ${{ secrets.EC2_HOST }}
-          username: ${{ secrets.EC2_USERNAME }}
-          key: ${{ secrets.EC2_PRIVATE_KEY }}
-          envs: APPLICATION_PROPERTIES
-          script_stop: true
+          host: ${{ secrets.EC2_HOST }} # EC2 인스턴스의 공인 IP 주소 또는 도메인
+          username: ${{ secrets.EC2_USERNAME }} # EC2에 접속할 사용자 이름
+          key: ${{ secrets.EC2_PRIVATE_KEY }} # SSH 접속을 위한 비밀키
+          envs: APPLICATION_PROPERTIES # 환경변수를 EC2 서버에 전달
+          script_stop: true # 스크립트 실행 중 오류가 발생하면 즉시 종료
           script: |
             cd /home/ubuntu/project-dive-musicstreaming
             rm -rf src/main/resources/application.yml
