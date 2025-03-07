@@ -10,7 +10,6 @@ jobs:
     runs-on: ubuntu-latest # Actions 실행 환경
     steps: # Job 이 실행될 단계 정의
       - name: Dive 프로젝트 서버 배포
-        run: SSH로 EC2 접속 - 배포
         uses: appleboy/ssh-action@master # Actions 의 appleboy/ssh-action 을 사용하여 SSH 접속 수행
         env: # 환경변수 설정
           APPLICATION_PROPERTIES: ${{ secrets.APPLICATION_YML }} # secret 에 작성한 yml 가져오기
