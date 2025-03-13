@@ -27,3 +27,6 @@ jobs:
             sudo ./gradlew clean build
             sudo fuser -k -n tcp 8070 || true
             nohup java -jar build/libs/*SNAPSHOT.jar > ./output.log 2>&1 &
+            cd TeamDive_Client
+            sudo npm run build
+            sudo systemctl restart nginx
