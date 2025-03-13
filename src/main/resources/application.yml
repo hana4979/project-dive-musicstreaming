@@ -1,0 +1,59 @@
+server:
+  port: 8070
+
+spring:
+  application:
+    name: SPServer
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/streaming
+    username: root
+    password: adminuser
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+    show-sql: true
+  mail:
+    host: smtp.gmail.com
+    port: 587 # smtp 주로 사용되는 port
+    username: hng8907@gmail.com # 보내는 사람 이메일
+    password: iuxo etuw vqbt anvn # 암호화된 비밀번호 발급 필요
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+          timeout: 5000
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+
+kakao:
+  client_id: 1331678041a10c682163a104e705d565 # rest API
+  redirect_uri: http://localhost:8070/member/kakaoLogin
+
+payment:
+  toss:
+    test_client_api_key: test_ck_LlDJaYngrojy9kWO4zRNVezGdRpX
+    test_secrete_api_key: test_gsk_docs_OaPz8L5KdmQXkzRz3y47BMw6
+    success_url: "http://localhost:8070/api/payments/toss/success"
+    fail_url: "http://localhost:8070/api/payments/toss/fail"
+
+aws:
+  accessKeyId: AKIA4IM3HGLZLUXB627M
+  secretAccessKey: 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
+  region: ap-northeast-2  # 사용할 AWS 리전
+  s3:
+    bucketName: divestreaming  # 사용할 S3 버킷 이름
+
+huggingface:
+  api:
+    token: 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
+
+openai:
+  api-key: "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"

@@ -8,7 +8,7 @@ const Footer = () => {
       <div className={styles.companyInfo}>
         {/* 첫 줄: 회사명, 사업자등록번호, 대표자명 */}
         <p>
-          <strong>(주) 예시회사</strong> | 사업자등록번호: 000-00-00000 | 대표: 홍길동
+          <strong>(주) 다이브</strong> | 사업자등록번호: 000-00-00000 | 대표: 다이브팀
         </p>
 
         {/* 둘째 줄: 주소, 연락처 */}
@@ -23,7 +23,7 @@ const Footer = () => {
 
         {/* 넷째 줄: 저작권 표시 등 */}
         <p>
-          COPYRIGHT © 2023 <strong>예시회사</strong>. ALL RIGHTS RESERVED.
+          COPYRIGHT © 2023 <strong>TEAM-DIVE</strong>. ALL RIGHTS RESERVED.
         </p>
       </div>
     </footer>
