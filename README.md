@@ -138,7 +138,7 @@ DIVE 플랫폼은 회원, 음원 정보, 결제 및 멤버십, 플레이리스�
 ## 8. 프로젝트 링크 및 참조
 
 * 📋 [기능정의서 (Notion)](https://pumped-date-0b2.notion.site/1a0d8b2427c980ecb8ddfb761444e685?v=1a0d8b2427c9801c8638000cd820bf76)
-* 📊 [API 정의서 (Google Sheets)](https://docs.google.com/spreadsheets/d/1GksnewH8uIOEdx30g2dgB4dq_KCed_aY0rNzicSNKKo/edit?usp=sharing)
+* 📊 [API 정의서 (Google Sheets)](https://docs.google.com/spreadsheets/d/1GksnewH8uIOEdx3Og2dgB4dq_KCed_aY0rNzicSNKKo/edit?usp=sharing)
 
 ```
 Copyright (c) 2025 TEAM DIVE All Rights Reserved.
